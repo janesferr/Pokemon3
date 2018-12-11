@@ -1,0 +1,32 @@
+
+    //  var hp = info['stats'][5]['base_stat'];
+    //   var attack = info['stats'][4]['base_stat'];
+    //   var defense = info['stats'][3]['base_stat'];
+    //   var types = [];
+    //   var type = info['types'][0]['type']['name'];
+    //   types.push(type);
+    //   var type2 = info['types'][1];
+    //   var abilities = [];
+    //   if (type2 != undefined) {
+    //     types.push(type2['type']['name']);
+    //   }
+    //   ability1 = info['abilities'][0]['ability']['name'];
+    //   abilities.push(ability1);
+    //   ability2 = info['abilities'][1];
+    //   if (ability2 != undefined) {
+    //     abilities.push(ability2['ability']['name']);
+    //   }
+    //   ability3 = info['abilities'][2];
+    //   if (ability3 != undefined) {
+    //     abilities.push(ability3['ability']['name']);
+    //   }
+    //   if (ability2 == undefined) {
+    //     abilities.push('<br>');
+    //   }
+
+    //  item.innerHTML += `<h1>Type: ${ product.product_type }</h1>`;
+    // let image = document.createElement("img");
+    //   image.src = product.images[0].src;
+    // image.style.height = "300px";
+    // image.style.width = "300px";
+    // item.append(image);
