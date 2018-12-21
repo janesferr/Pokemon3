@@ -1,5 +1,5 @@
 
-axios.get("https://pokeapi.co/api/v2/pokemon/500/")
+axios.get("https://pokeapi.co/api/v2/pokemon/064/")
   .then(response => {
 
     let data = response.data;
@@ -29,37 +29,32 @@ axios.get("https://pokeapi.co/api/v2/pokemon/500/")
 
 
       let abilities = document.createElement("p");
-      let abilities1 = document.createElement("p");
       
-     for (i = 0; i < data.abilities.length; i++) {
-     
-     abilities.innerHTML = `<p>Abilities: ${data.abilities[0].ability.name}<p>`;
-     abilities1.innerHTML = `<p>Abilities two: ${data.abilities[1].ability.name}<p>`;
-     
-    //  document.body.appendChild(abilities);
-     }
+
+    data.abilities.forEach(item => {
+      abilities.innerHTML += item.ability.name + "<br>"
+    });
+    
 
       
-     document.body.appendChild(item);
-     
-     document.body.appendChild(hp);
-     document.body.appendChild(attack);
-     document.body.appendChild(defense);
-     document.body.appendChild(abilities);
-     document.body.appendChild(abilities1);
     
+     let kadabraCard = document.getElementById('card-kadabra');
+     kadabraCard.appendChild(item);
+     kadabraCard.appendChild(hp);
+     kadabraCard.appendChild(attack);
+     kadabraCard.appendChild(defense);
+     kadabraCard.appendChild(abilities);
+     
 
   });
 
 
-  axios.get("https://pokeapi.co/api/v2/pokemon/600/")
+  axios.get("https://pokeapi.co/api/v2/pokemon/114/")
   .then(response => {
 
     let data = response.data;
     console.log(data);
 
-    // for (let i = 0; i < data.products.length; i++) {
-    //  let product = data.products[i];
      let item = document.createElement("h1");
     // // item.id = product.id;
      item.innerHTML += `<h1>Name: ${data.name}</h1>`;
@@ -81,26 +76,19 @@ axios.get("https://pokeapi.co/api/v2/pokemon/500/")
       defense.innerHTML = `<div> Defense: ${data.stats[3].base_stat}<div>`;
 
 
-      let abilities = document.createElement("p");
-      let abilities1 = document.createElement("p");
+      data.abilities.forEach(item => {
+        abilities.innerHTML += item.ability.name + "<br>"
+      });
       
-     for (i = 0; i < data.abilities.length; i++) {
-     
-     abilities.innerHTML = `<p>Abilities: ${data.abilities[0].ability.name}<p>`;
-     abilities1.innerHTML = `<p>Abilities two: ${data.abilities[1].ability.name}<p>`;
-     
-    //  document.body.appendChild(abilities);
-     }
-
+  
+        
       
-     document.body.appendChild(item);
-     
-     document.body.appendChild(hp);
-     document.body.appendChild(attack);
-     document.body.appendChild(defense);
-     document.body.appendChild(abilities);
-     document.body.appendChild(abilities1);
-    
+       let tangelaCard = document.getElementById('card-tangela');
+       tangelaCard.appendChild(item);
+       tangelaCard.appendChild(hp);
+       tangelaCard.appendChild(attack);
+       tangelaCard.appendChild(defense);
+       tangelaCard.appendChild(abilities);
 
   });
 
@@ -112,8 +100,7 @@ axios.get("https://pokeapi.co/api/v2/pokemon/500/")
     let data = response.data;
     console.log(data);
 
-    // for (let i = 0; i < data.products.length; i++) {
-    //  let product = data.products[i];
+    
      let item = document.createElement("h1");
     // // item.id = product.id;
      item.innerHTML += `<h1>Name: ${data.name}</h1>`;
@@ -136,52 +123,36 @@ axios.get("https://pokeapi.co/api/v2/pokemon/500/")
 
 
       let abilities = document.createElement("p");
-      let abilities1 = document.createElement("p");
       
-     for (i = 0; i < data.abilities.length; i++) {
-     
-     abilities.innerHTML = `<p>Abilities: ${data.abilities[0].ability.name}<p>`;
-     abilities1.innerHTML = `<p>Abilities two: ${data.abilities[1].ability.name}<p>`;
-     
-    //  document.body.appendChild(abilities);
-     }
-
       
-     document.body.appendChild(item);
-     
-     document.body.appendChild(hp);
-     document.body.appendChild(attack);
-     document.body.appendChild(defense);
-     document.body.appendChild(abilities);
-     document.body.appendChild(abilities1);
-    
+      let emboarCard = document.getElementById('card-emboar');
+      emboarCard.appendChild(item);
+      emboarCard.appendChild(hp);
+      emboarCard.appendChild(attack);
+      emboarCard.appendChild(defense);
+      emboarCard.appendChild(abilities);
 
   });
 
-// move related information
-// priority
-// power
-// accuracy
-// and have this information be hidden by default and then have it display on a button click
-// use an animation with the reveal
 
-
-// Completion Requirements:
-
-// A completed assignment should:
-
-// have a wireframe
-// represent a fictitious trainer name
-// be deployed to Github pages
-// have each pokemon stored within a Pokemon object and have properties for
-// 
-
-// defense - integer
-// abilities - array of strings
-// have all pokemon stored within a container object named after your trainer name
-// have a method named all
-// accepts no parameters
-// returns an array of Pokemon objects
-// have a method named get
-// accepts 1 parameter called name
-// returns a Pokemon object housing information for the pokemon it found
+      // Get the modal
+      var modal = document.getElementById('myModal');
+      
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('myImg');
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() { 
+        modal.style.display = "none";
+      }
+      
