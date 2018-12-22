@@ -49,14 +49,14 @@ function drawCard(cardId, data) {
   pokemonCard.appendChild(abilities);
 }
 
-axios.get("http://fizal.me/pokeapi/api/v2/id/64.json")
+axios.get("https://fizal.me/pokeapi/api/v2/id/64.json")
   .then(response => {
     console.log(response.data);
     drawCard('card-kadabra', response.data);
   });
 
 
-axios.get("http://fizal.me/pokeapi/api/v2/id/114.json")
+axios.get("https://fizal.me/pokeapi/api/v2/id/114.json")
   .then(response => {
     console.log(response.data);
     drawCard('card-tangela', response.data);
