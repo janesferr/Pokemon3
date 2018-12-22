@@ -8,48 +8,80 @@
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+
+  <script src="angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
   <link rel="stylesheet" href="main.css">
 
   <title></title>
 </head>
 
 <body>
+
+
   <h1>Pokemon</h1>
+
+  <form>
+    <form>
+      <div> <h3>Please Enter a Trainer Name:</h3></div>
+      <input type="text" id="input_id" value="">
+      <input type="button" value="Submit" onclick="trainer()" />
+      <div id="alert" style="color:white"></div>
+    </form>
+  </form>
+  
   <div class="container">
     <div class="row">
+
       <div class="col-sm">
         <h3>Kadabra</h3>
         <div class="card" style="width: 18rem;" id='card-kadabra'>
+            <ul ng-controller="GalleryCtrl">
+                <li ng-repeat="image in images">
+                  <a ng-click="openLightboxModal($index)">
+                    <img ng-src="{{064Kadabra.png}}" class="img-thumbnail">
+                  </a>
+                </li>
+              </ul>
           <img class="card-img-top" src="064Kadabra.png" alt="Card image cap" id="myImg">
           <div class="card-body">
             <div class="card-title"></div>
             <p class="card-text"></p>
-
           </div>
         </div>
       </div>
+
       <div class="col-sm">
         <h3>Tangela</h3>
         <div class="card" style="width: 18rem;" id='card-tangela'>
+            <ul ng-controller="GalleryCtrl">
+                <li ng-repeat="image in images">
+                  <a ng-click="openLightboxModal($index)">
+                    <img ng-src="{{Tangelaanimated-1}}" class="img-thumbnail">
+                  </a>
+                </li>
+              </ul>
           <img class="card-img-top" src="Tangelaanimated-1.gif" alt="Card image cap" id="myImg">
           <div class="card-body">
             <h5 class="card-title"></h5>
             <p class="card-text"></p>
-
-          </div>
+          </div>    
         </div>
       </div>
+
       <div class="col-sm">
-        <h3> Emboar </h3>
+        <h3>Emboar</h3>
         <div class="card" style="width: 18rem;" id='card-emboar'>
           <img class="card-img-top" src="PGL_Emboar.png" alt="Card image cap" id="myImg">
           <div class="card-body">
             <h5 class="card-title"></h5>
             <p class="card-text"></p>
-
           </div>
         </div>
       </div>
+
     </div>
 
     <!-- The Modal -->
@@ -59,14 +91,14 @@
       <div id="caption"></div>
     </div>
 
-    <img id="myImg" src="" alt="Snow" style="width:100%;max-width:300px">
+
 
 
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="img03">
+      <img class="modal-content" id="img02">
       <div id="caption"></div>
     </div>
 
